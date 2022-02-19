@@ -14,7 +14,7 @@ class Tendril
     myAngle = theta;
     myX = x;
     myY = y;
-    myNumSegments = len;
+    myNumSegments = len-1;
   }
   public void show()
   {
@@ -22,13 +22,12 @@ class Tendril
     float startY = myY;
     for (int i = 0; i < myNumSegments; i++){
       myAngle = myAngel + (float)(Math.random()*0.4)-0.2;
-      int endX = startX + (int)(SEG_LENGTH*Math.cos(myAngle));
-      int endY = startY + (int)(SEG_LENGTH*Math.sin(myAngle));
+      double endX = startX + Math.cos(myAngle)*SEG_LENGTH;
+      double endY = startY + Math.sin(myAngle)*SEG_LENGTH;
       line(startX, startY, endX, endY);
       startX = endX;
       startY = endY;
-      if(myNumSegments > 10){
-        Tendril temp = new Tendril(myNumSegments/2, myAngle, (int)startX, (int)startY);
-      temp.show();
+      if(myNumSegments >= 3){
+        Cluster temp = new Cluster(myNumSegments-1,(int)startX,(int)startY);
     }
 }
