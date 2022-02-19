@@ -1,6 +1,6 @@
 public void setup()
 {
-  size(600, 600);  
+  size(400, 400);  
   background(255);
   noLoop();
 }
