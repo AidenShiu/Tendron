@@ -21,16 +21,14 @@ class Tendril
     float startX = myX;
     float startY = myY;
     for (int i = 0; i < myNumSegments; i++){
-      myAngle += (float)(Math.random()*0.3)-0.2;
-      float endX = startX + (float)Math.cos(myAngle) * myNumSegments;
-      float endY = startY + (float)Math.sin(myAngle) * myNumSegments;
+      myAngle = myAngel + (float)(Math.random()*0.4)-0.2;
+      int endX = startX + (int)(SEG_LENGTH*Math.cos(myAngle));
+      int endY = startY + (int)(SEG_LENGTH*Math.sin(myAngle));
       line(startX, startY, endX, endY);
       startX = endX;
       startY = endY;
-      Tendril temp = new Tendril(myNumSegments/2, myAngle, (int)startX, (int)startY);
+      if(myNumSegments > 10){
+        Tendril temp = new Tendril(myNumSegments/2, myAngle, (int)startX, (int)startY);
       temp.show();
     }
-      }
-      
-  }
 }
