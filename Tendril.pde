@@ -21,7 +21,7 @@ public class  Tendril
   
   public void show()
   {
-    stroke(color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255)));
+    stroke(color((int)(0),(int)(0),(int)(0)));
     double startX = myX;
     double startY = myY;
     for(int i = 0; i < myNumSegments; i++){
