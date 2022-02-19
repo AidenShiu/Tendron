@@ -3,7 +3,6 @@ class Tendril
   public final static int SEG_LENGTH = 4; //length of each segment in the tendril
   private int myNumSegments, myX, myY;
   private double myAngle;
-  
   /**
    Class constructor
    len is how many segments in this tendril (each a fixed length, 4 is a good start)
@@ -12,10 +11,27 @@ class Tendril
    */
   public Tendril(int len, double theta, int x, int y)
   {
-    //your code here
+    myAngle = theta;
+    myX = x;
+    myY = y;
+    myNumSegments = len;
   }
   public void show()
   {
-    //your code here
+    float startX = myX;
+    float startY = myY;
+    for (int i = 0; i <= myNumSegments-1; i++){
+      myAngle += (float)(Math.random()*0.8)-0.1;
+      float endX = startX + (float)Math.cos(myAngle) * myNumSegments;
+      float endY = startY + (float)Math.sin(myAngle) * myNumSegments;
+      line(startX, startY, endX, endY);
+      startX = endX;
+      startY = endY;
+      if (myNumSegments >= 3){
+        Tendril temp = new Tendril(myNumSegments/2, myAngle, (int)startX, (int)startY);
+        temp.show();
+    }
+      }
+      
   }
 }
