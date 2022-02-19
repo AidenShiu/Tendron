@@ -1,7 +1,7 @@
 public class  Tendril
 {
   
-  public final static int SEG_LENGTH = 25; //length of each segment in the tendril
+  public final static int SEG_LENGTH = 35; //length of each segment in the tendril
   private int myNumSegments, myX, myY;
   private double myAngle;
   /**
