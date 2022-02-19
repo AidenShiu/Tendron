@@ -20,8 +20,8 @@ class Tendril
   {
     float startX = myX;
     float startY = myY;
-    for (int i = 0; i <= myNumSegments-1; i++){
-      myAngle += (float)(Math.random()*0.8)-0.1;
+    for (int i = 0; i < myNumSegments; i++){
+      myAngle += (float)(Math.random()*0.3)-0.2;
       float endX = startX + (float)Math.cos(myAngle) * myNumSegments;
       float endY = startY + (float)Math.sin(myAngle) * myNumSegments;
       line(startX, startY, endX, endY);
