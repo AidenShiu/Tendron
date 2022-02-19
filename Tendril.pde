@@ -27,7 +27,9 @@ class Tendril
       line(startX, startY, endX, endY);
       startX = endX;
       startY = endY;
+      }
       if(myNumSegments >= 3){
         Cluster temp = new Cluster(myNumSegments-1,(int)startX,(int)startY);
     }
+  }
 }
