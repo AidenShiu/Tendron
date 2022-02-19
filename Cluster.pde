@@ -4,7 +4,7 @@ public class Cluster
 
     public Cluster(int len, int x, int y)
     {
-        for (int i = 0; i <= 6; i++){
+        for (int i = 0; i < 7; i++){
           Tendril temp2 = new Tendril(len , PI+2*PI/7*i, x, y);
           temp2.show();
         }
