@@ -1,6 +1,6 @@
 public void setup()
 {
-  size(400, 400);  
+  size(500, 500);  
   background(255);
   noLoop();
 }
@@ -8,7 +8,7 @@ public void setup()
 public void draw()
 {
   background(255);
-  Cluster c = new Cluster(10, 310, 310); // initial number of segments in the tendril and starting (x,y) coordinate
+  Cluster c = new Cluster(5, 250, 250); // initial number of segments in the tendril and starting (x,y) coordinate
 }
 public void mousePressed()
 {
