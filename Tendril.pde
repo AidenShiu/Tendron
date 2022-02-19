@@ -18,13 +18,13 @@ class Tendril
   }
   public void show()
   {
-    float startX = myX;
-    float startY = myY;
+    double startX = myX;
+    double startY = myY;
     for (int i = 0; i < myNumSegments; i++){
       myAngle = myAngel + (float)(Math.random()*0.4)-0.2;
       double endX = startX + Math.cos(myAngle)*SEG_LENGTH;
       double endY = startY + Math.sin(myAngle)*SEG_LENGTH;
-      line(startX, startY, endX, endY);
+      line((float)startX,(float)startY,(float)endX,(float)endY);
       startX = endX;
       startY = endY;
       }
