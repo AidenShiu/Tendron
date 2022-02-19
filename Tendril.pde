@@ -27,9 +27,8 @@ class Tendril
       line(startX, startY, endX, endY);
       startX = endX;
       startY = endY;
-      if (myNumSegments >= 3){
-        Tendril temp = new Tendril(myNumSegments/2, myAngle, (int)startX, (int)startY);
-        temp.show();
+      Tendril temp = new Tendril(myNumSegments/2, myAngle, (int)startX, (int)startY);
+      temp.show();
     }
       }
       
